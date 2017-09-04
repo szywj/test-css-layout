@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>混合布局编程挑战</title>
+<style type="text/css">
+body{ margin:0; padding:0; font-size:30px; color:#fff}
+.top{background:#ccc;height:100px;}
+.main{background:red;height:500px;position:relative;}
+.left{width:200px;background:blue;height:500px;position:absolute;}
+.right{background:#9c9;margin-left:210px;height:500px;position:absolute;width:100%;margin-right:0;}
+.foot{background:#f63;height:50px;}
+/*
+
+1、宽度自适应：不设置宽度；
+
+2、样式加载：样式按从上往下排序，写在前面的先加载；
+
+3、兼容ie6：不能用浮动float，只能先设置父元素main为相对定位relative作为参照定位，后设置其子元素(right、left)为绝对定位absolute，并设置其具体位置。
+
+*/
+
+/*
+
+1、如不给right设置外边距margin，则其自适应宽度会与其中的文字同宽；
+
+2、由于left的width为200px，则right的margin-left为210px，因此right与left的间隔为10px；
+
+3、由于right为main的首个子元素，因此默认叠加在main上面，无需设置绝对定位。
+
+*/
+</style>
+
+</head>
+
+<body>
+<div class="top">top</div>
+<div class="main">
+    <div class="right">right</div>
+    <div class="left">left</div>
+</div>
+<div class="foot">foot</div>
+
+</body>
+</html>
