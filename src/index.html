@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style type="text/css">
-  body {
+  /* body {
     margin:0; padding:0;
   }
   .top {
@@ -21,25 +21,73 @@
   .foot {
     height: 100px; width: 800px; background: #900; margin: 0 auto;
   }
+  .add {
+    color: #ccc;
+    transition: color 3s;
+    border: 1px solid;
+  }
+  .add:before {
+    border-top: 10px solid;
+  }
+  .add:after {
+    border-left: 10px solid;
+  }
+  .add:hover {
+    color: #06c;
+  } */
+  .triangle {
+    width: 100px;
+    height: 100px;
+    border: 100px solid;
+    border-color: red green blue orange;
+  }
+  .triangle1 {
+    width: 0px;
+    height: 0px;
+    border: 100px solid;
+    border-color: red red transparent transparent;
+  }
+  .triangle2 {
+    width: 600px;
+    border: 2px solid;
+    border-color: transparent transparent red;
+  }
+  .rectangle {
+    width: 604px;
+    background: red;
+    color: white;
+    text-align: center;
+  }
+  .triangle3 {
+    width: 600px;
+    border: 2px solid;
+    border-color: red transparent transparent;
+  }
   </style>
 </head>
 <body>
+  <div class="triangle"></div>
+  <div class="triangle1"></div>
+  <div class="triangle2"></div>
+  <div class="rectangle">我是一个圆角框</div>
+  <div class="triangle3"></div>
+  <!-- <a href="javascript:" class="add">+</a>
   <app-three-column></app-three-column>
   <div class="top">
   </div>
   <div class="main">
-  </div>
+  </div> -->
   <!-- 上个元素的margin-bottom和下一个元素的margin-top会重叠，以大的为准，不会叠加 -->
-  <hr />
+  <!-- <hr /> -->
   <!-- 如果外层元素有border或者padding，则内层元素的高会贴着外层元素 -->
-  <div style="height:auto; background:silver; ">
+  <!-- <div style="height:auto; background:silver; ">
     <p style="margin-top:2em; margin-bottom:2em; ">A Paragraph!</p>
   </div>
   <div style="height:auto; background:silver; border-top: 1px solid; border-bottom: 1px solid; ">
     <p style="margin-top:2em; margin-bottom:2em; ">Another Paragraph!</p>
   </div>
   <div class="foot">
-  </div>
-  <app-root></app-root>
+  </div> -->
+  <!-- <app-root></app-root> -->
 </body>
 </html>
